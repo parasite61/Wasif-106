@@ -78,7 +78,7 @@ class _ClimateState extends State<Climate> {
     String apiUrl =
         'http://api.openweathermap.org/data/2.5/weather?q=$city&appid='
         '${util.apiId}&units=imperial';
-    http.Response response = await http.get(apiUrl);
+    http.Response response = await http.get();
 
     return json.decode(response.body);
   }
